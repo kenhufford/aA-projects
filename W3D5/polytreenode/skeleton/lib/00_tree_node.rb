@@ -39,11 +39,10 @@ class PolyTreeNode
             return result if result != nil
         end
 
-        return nil if self.parent == nil
+        return nil
     end
 
     def bfs(target)
-    
         queue = [self]
         
         until queue.empty?
