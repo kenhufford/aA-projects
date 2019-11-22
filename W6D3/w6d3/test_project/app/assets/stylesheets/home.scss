@@ -1,0 +1,17 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.test {
+  display: flex;
+  background-color: red;
+  position: relative;
+  width: 100px;
+  justify-content: center;
+  animation: twisty 4s ease 2s infinite alternate;
+}
+
+@keyframes twisty {
+  0% {transform: rotate(0deg); left: 0px;}
+  50% {transform: rotate(1440deg); left: 1000px;}
+  100% {transform: rotate(0deg); left: 0px;}
+}
