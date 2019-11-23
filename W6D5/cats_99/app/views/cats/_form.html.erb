@@ -1,0 +1,28 @@
+<% action == :edit ? cat_path = cat_url(cat) : cat_path = cats_url %>
+
+<form action="<%= cat_path %>" method="post">
+
+  <input type="hidden" name="_method" value= <%= action == :edit ? "patch" : "post" %> >
+
+  <label for="cat_name">Name
+    <input type="text" name="cat[name]" id="cat_name" value="<%=cat.name%>">
+  </label>
+  <br>
+  <label for="cat_birth_date">Birth Date
+    <input type="date" name="cat[birth_date]" id="cat_birth_date" value="<%=cat.birth_date%>">
+  </label>
+  <br>
+  <label for="cat_color">Color
+    <input type="text" name="cat[color]" id="cat_color" value="<%=cat.color%>">
+  </label>
+  <br>
+    <input type="radio" name="cat[sex]" value = "M" id="cat_sex_male" <%= cat.sex = "M" ? "checked" : "" %> >
+    <label for="cat_sex_male">Male</label>
+  <br>
+    <input type="radio" name="cat[sex]" value="F" id="cat_sex_female" <%= cat.sex = "F" ? "checked" : "" %> >
+    <label for="cat_sex_female">Female</label>
+  <br>
+    <input type="submit" value =<%= action == :edit ? "Update cat!" : "Create cat!"%>>
+
+
+</form>
