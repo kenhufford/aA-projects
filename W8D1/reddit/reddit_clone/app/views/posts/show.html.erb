@@ -1,0 +1,18 @@
+
+
+
+
+<ul>
+  <li>Title: <%= @post.title %></li>
+  <li>URL: <%= @post.url %></li>
+  <li>Content: <%= @post.content %></li>
+  <li>Author: <%= @post.author.username %></li>
+  <li> <a href="<%=sub_url(@post.sub_id)%>"></a><%=@post.sub.title%></li>
+  <li><form action="<%=post_url(@post)%>" method="post">
+      <%=auth_token%>
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete Post">
+      </form>
+  </li>
+</ul>
+

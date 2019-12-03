@@ -1,0 +1,17 @@
+<h1>Subreddit: <%= @sub.title %></h1>
+<h4>Description: <%= @sub.description %></h4>
+<h4>Moderator: <%= @sub.moderator.username %></h4>
+
+<ol>
+  <% @sub.posts.each do |post| %>
+    <li>
+      <a href="<%= post_url(post.id) %>"><%= post.title %></a>
+    </li>
+  <% end %>
+</ol>
+
+<a href="<%= new_sub_post_url(@sub.id) %>">Create New Post</a>  
+<a href="<%= subs_url %>">All Subs</a>  
+
+
+
