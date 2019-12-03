@@ -1,0 +1,37 @@
+<header class="main-nav">
+	<nav class="left-nav">
+		<ul>
+			<li id="sections-sidebar-btn">
+				<i class="fa fa-bars"></i>
+					<div class="dropdown">
+					<span>Sections</span>
+					<div class="dropdown-content">
+						<p>Section1</p>
+						<p>Section2</p>
+						<p>Section3</p>
+					</div>
+			</li>
+			<li id="search-modal-btn">
+				<i class="fa fa-search"></i>
+				<span>search</span>
+			</li>
+		</ul>
+	</nav>
+	<nav class="right-nav">
+		<ul>
+			<li>
+				<span>Subscribe</span>
+			</li>
+			<li>
+				<span>Login</span>
+			</li>
+			<li>
+				<div class="dropdown" style="float:right;">
+				<i class="fa fa-cog fa-spin" style="font-size:36px"></i>
+					<%= render partial: 'shared/gear_dropdown' %>
+				</div>
+			</li>
+		</ul>
+	</nav>
+</header>
+
