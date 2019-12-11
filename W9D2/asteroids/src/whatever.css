@@ -1,0 +1,12 @@
+mo.draw(document.getElementById("game-canvas").getContext("2d"))
+
+const mo = new MovingObject({
+  pos: [30, 30],
+  vel: [10, 10],
+  radius: 5,
+  color: "#00FF00"
+});
+
+hello{
+  color: #00d9ff;
+}
